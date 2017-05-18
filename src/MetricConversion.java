@@ -69,24 +69,24 @@ public class MetricConversion extends javax.swing.JFrame {
             .addGroup(conversionPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(conversionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(convertLabel1)
                     .addComponent(convertLabel2)
                     .addComponent(convertLabel3)
-                    .addComponent(convertLabel4))
+                    .addComponent(convertLabel4)
+                    .addComponent(convertLabel1))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         conversionPanelLayout.setVerticalGroup(
             conversionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(conversionPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(convertLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addComponent(convertLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addComponent(convertLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addComponent(convertLabel4)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         choiceLabel.setText("Conversion Choice:");
@@ -147,7 +147,7 @@ public class MetricConversion extends javax.swing.JFrame {
                 .addComponent(headerSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(conversionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(choiceLabel)
                     .addComponent(choiceInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -157,9 +157,9 @@ public class MetricConversion extends javax.swing.JFrame {
                     .addComponent(valueInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(convertButton)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(output)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -271,22 +271,50 @@ public class MetricConversion extends javax.swing.JFrame {
     private javax.swing.JTextField valueInput;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     *
+     * @param value is the initial value for the number
+     * @param converted is the number after it has been converted
+     * @return
+     */
+    
     private int ItoC(int value, int converted) {
         converted = (int) (value * 2.54);
         return (converted);
     }
 
+    /**
+     *
+     * @param value is the initial value for the number
+     * @param converted is the number after it has been converted
+     * @return
+     */
+    
     private int FtoC(int value, int converted) {
         converted = (int) (value * 30);
         return (converted);
     }
 
+    /**
+     *
+     * @param value is the initial value for the number
+     * @param converted is the number after it has been converted
+     * @return
+     */
+    
     private int MtoK(int value, int converted) {
         converted = (int) (value * 1.6);
         System.out.println(converted);
         return (converted);
     }
 
+    /**
+     *
+     * @param value is the initial value for the number
+     * @param converted is the number after it has been converted
+     * @return
+     */
+    
     private int YtoM(int value, int converted) {
         converted = (int) (value * 0.91);
         return (converted);
